@@ -7,7 +7,7 @@ if 3 then choose scissor
 return the choice
 */
 function getComputerChoice() {
-    num = Math.floor(Math.random() * 3) + 1;
+    let num = Math.floor(Math.random() * 3) + 1;
     num = num == 1 ? "rock" : num == 2 ? "paper" : "scissor" 
     return num;
 }
@@ -25,4 +25,4 @@ function getHumanChoice() {
     return choice
 }
 
-console.log(getHumanChoice())
+console.log(getHumanChoice())   
