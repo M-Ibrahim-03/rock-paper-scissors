@@ -13,3 +13,16 @@ function getComputerChoice() {
 }
 
 console.log(getComputerChoice())
+
+
+/*
+Pseudocode / Algorithm
+Get input from the user as one of the three options ["rock", "paper" pr "scissor"]
+return the input
+*/
+function getHumanChoice() {
+    let choice = prompt('Enter ["rock", "paper" or "scissor"]')
+    return choice
+}
+
+console.log(getHumanChoice())
