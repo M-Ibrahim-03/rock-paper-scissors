@@ -42,7 +42,7 @@ function playGame()
     let humanScore = 0;
     let computerScore = 0;
 
-    while (humanScore <= 5 || computerScore <= 5) {
+    // while (humanScore <= 5 || computerScore <= 5) {
     if (humanScore >= 5 && computerScore < 5) {
         console.log('Game over you won!')
     }
@@ -63,6 +63,7 @@ function playGame()
         humanChoice = humanChoice.toLowerCase();
         if(humanChoice == computerChoice) {
             console.log("It's a tie!")
+            result.innerText = "It's a tie!"
         }
         else if(
             (humanChoice=="rock" && computerChoice=="scissors") ||
@@ -70,6 +71,7 @@ function playGame()
             (humanChoice=="scissors" && computerChoice=="paper")
         ) {
             console.log(`You Win! ${humanChoice} beats ${computerChoice}`)
+            result.innerText = `You Win! ${humanChoice} beats ${computerChoice}`
             humanScore++;
         }
         else if(
@@ -77,7 +79,8 @@ function playGame()
             (humanChoice=="paper" && computerChoice=="scissors") ||
             (humanChoice=="scissors" && computerChoice=="rock")
         ) {
-            console.log(`You lose! ${computerChoice} beats ${humanChoice}`)
+            console.log(`You lose! ${humanChoice} gets beaten by ${computerChoice}`)
+            result.innerText = `You lose! ${humanChoice} gets beaten by ${computerChoice}`
             computerScore++;
         }
     }
@@ -102,7 +105,7 @@ function playGame()
     }  
     )
 
-    }
+    // }
    
 
     // else if (humanScore > computerScore) console.log(`You Won the game, congratulations.`);
