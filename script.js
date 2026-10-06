@@ -71,6 +71,7 @@ function playGame()
             ) {
                 result.innerText = `You Win! ${humanChoice} beats ${computerChoice}`
                 humanScore++;
+                score.innerText = `Your score: ${humanScore} , Computer score: ${computerScore}`
             }
             else if(
                 (humanChoice=="rock" && computerChoice=="paper") ||
@@ -79,16 +80,18 @@ function playGame()
             ) {
                 result.innerText = `You lose! ${humanChoice} gets beaten by ${computerChoice}`
                 computerScore++;
+                score.innerText = `Your score: ${humanScore} , Computer score: ${computerScore}`
+
             }
 
         
         // Winner Declare
         if (humanScore >= 5 && computerScore < 5) {
-            console.log('Game over you won!')
+            result.innerText = 'Game over you won!'
             gameOver = true;
         }
         else if (humanScore < 5 && computerScore >= 5) {
-            console.log('Game over you lost!')
+            result.innerText = 'Game over you lost!'
             gameOver = true
         }
     }
