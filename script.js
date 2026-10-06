@@ -27,7 +27,7 @@ let rock = document.querySelector(".rock");
 let paper = document.querySelector(".paper");
 let scissors = document.querySelector(".scissors");
 
-const result = document.querySelector('div');
+const result = document.querySelector('.results');
 
 const score = document.createElement("p");
 const body = document.querySelector("body")
