@@ -23,6 +23,14 @@ function getHumanChoice() {
     return choice
 }
 
+let rock = document.querySelector(".rock")
+let paper = document.querySelector(".paper")
+let scissors = document.querySelector(".scissors")
+
+const result = document.querySelector('div')
+
+
+
 /*
 Pseudocode
 Define score for human and computer
@@ -33,6 +41,14 @@ function playGame()
 {
     let humanScore = 0;
     let computerScore = 0;
+
+    while (humanScore <= 5 || computerScore <= 5) {
+    if (humanScore >= 5 && computerScore < 5) {
+        console.log('Game over you won!')
+    }
+    else if (humanScore < 5 && computerScore >= 5) {
+        console.log('Game over you lost!')
+    }
 
     /*
     Pseudocode / Algorithm
@@ -66,15 +82,34 @@ function playGame()
         }
     }
 
-    playRound(humanChoice=getHumanChoice(), computerChoice=getComputerChoice());
-    playRound(humanChoice=getHumanChoice(), computerChoice=getComputerChoice());
-    playRound(humanChoice=getHumanChoice(), computerChoice=getComputerChoice());
-    playRound(humanChoice=getHumanChoice(), computerChoice=getComputerChoice());
-    playRound(humanChoice=getHumanChoice(), computerChoice=getComputerChoice());
 
-    if (humanScore > computerScore) console.log(`You Won the game, congratulations.`);
-    else if (computerScore > humanScore) console.log("You lost the game, better luck next time.");
-    else console.log("It's a tie!")
+
+    rock.addEventListener("click", 
+    () => {
+        playRound(humanChoice="rock", computerChoice=getComputerChoice())
+    }
+    )
+
+    paper.addEventListener("click", 
+    () => {
+        playRound(humanChoice="paper", computerChoice=getComputerChoice())
+    }    
+    )
+
+    scissors.addEventListener("click", 
+    () => {
+        playRound(humanChoice="scissors", computerChoice=getComputerChoice())
+    }  
+    )
+
+    }
+   
+
+    // else if (humanScore > computerScore) console.log(`You Won the game, congratulations.`);
+    // else if (computerScore > humanScore) console.log("You lost the game, better luck next time.");
+    // else console.log("It's a tie!")
+
 }
 
 playGame()
+
